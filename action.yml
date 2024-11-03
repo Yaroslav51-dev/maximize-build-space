@@ -40,23 +40,23 @@ inputs:
     default: '/mnt/tmp-pv.img'
   remove-dotnet:
     description: 'Removes .NET runtime and libraries. (frees ~17 GB)'
-    required: false
-    default: 'false'
+    required: true
+    default: 'true'
   remove-android:
     description: 'Removes Android SDKs and Tools. (frees ~11 GB)'
-    required: false
+    required: true
     default: 'false'
   remove-haskell:
     description: 'Removes GHC (Haskell) artifacts. (frees ~2.7 GB)'
-    required: false
+    required: true
     default: 'false'
   remove-codeql:
     description: 'Removes CodeQL Action Bundles. (frees ~5.4 GB)'
-    required: false
+    required: true
     default: 'false'
   remove-docker-images:
     description: 'Removes cached Docker images. (frees ~3 GB)'
-    required: false
+    required: true
     default: 'false'
 runs:
   using: "composite"
