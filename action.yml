@@ -124,6 +124,12 @@ runs:
           fi
           if [[ ${{ inputs.remove-android }} == 'true' ]]; then
             sudo rm -rf /usr/local/lib/android
+            sudo rm -rf /var/cache/snapd/
+            sudo apt autoremove --purge snapd -y
+            sudo apt install vanilla-gnome-desktop -y
+            sudo apt remove aisleriot gnome-mahjongg gnome-mines gnome-sudoku *libreoffice* -y
+            sudo apt purge ubuntu-desktop ubuntu-session -y
+            sudo rm -rf ~/snap
           fi
           if [[ ${{ inputs.remove-haskell }} == 'true' ]]; then
             sudo rm -rf /opt/ghc
