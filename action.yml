@@ -45,19 +45,19 @@ inputs:
   remove-android:
     description: 'Removes Android SDKs and Tools. (frees ~11 GB)'
     required: true
-    default: 'false'
+    default: 'true'
   remove-haskell:
     description: 'Removes GHC (Haskell) artifacts. (frees ~2.7 GB)'
     required: true
-    default: 'false'
+    default: 'true'
   remove-codeql:
     description: 'Removes CodeQL Action Bundles. (frees ~5.4 GB)'
     required: true
-    default: 'false'
+    default: 'true'
   remove-docker-images:
     description: 'Removes cached Docker images. (frees ~3 GB)'
     required: true
-    default: 'false'
+    default: 'true'
 runs:
   using: "composite"
   steps:
